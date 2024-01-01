@@ -1,14 +1,14 @@
-
 import AddToCart from './AddToCart';
+import ImageGallery from './ImageGallery';
 
 const Product = ({ product }: any) => {
     const { name, price, description, images, id } = product
 
     return (
-        <div className='bg-white mb-12 sm:mb-0'>
+        <div className='bg-white mb-12 pb-12'>
             <div className='mx-auto max-w-screen-xl px-4 md:px-8 sm:mt-28'>
                 <div className='grid gap-8 md:gap-36 md:grid-cols-2'>
-                    <img src={images[0]} alt="" />
+                    <ImageGallery />
 
                     <div className='md:py-8'>
 

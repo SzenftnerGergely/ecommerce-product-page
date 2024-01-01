@@ -1,5 +1,4 @@
 import { useState } from "react"
-// @ts-ignore
 import { useShoppingCart } from "use-shopping-cart"
 
 interface ProductCart {

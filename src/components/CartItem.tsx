@@ -1,4 +1,3 @@
-// @ts-ignore
 import { useShoppingCart } from 'use-shopping-cart'
 import { CartEntry } from 'use-shopping-cart/core';
 

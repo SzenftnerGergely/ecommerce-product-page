@@ -1,11 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-    body {
-      font-family: 'Kumbh Sans', sans-serif;
-    }
+  body {
+    font-family: "Kumbh Sans", sans-serif;
   }
+}
+
+/* new styles for swiper button added */
+
+.swiper-button {
+  display: flex;
+  position: absolute;
+  top: calc(50% - 12px);
+  z-index: 10;
+  cursor: pointer;
+}
+.swiper-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.image-swiper-button-prev {
+  color:black;
+  left: 5px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px;
+}
+.image-swiper-button-next {
+  color:black;
+  right: 5px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 10px
+}
+.swiper-button-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.swiper-slide img {
+  border-radius: 15px;
+}
