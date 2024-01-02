@@ -7,11 +7,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <CartProvider
     mode="payment"
     cartMode="client-only"
-    successUrl="stripe.com"
-    cancelUrl="twitter.com/dayhaysoos"
+    successUrl=""
+    cancelUrl=""
     currency="USD"
-    allowedCountries={['US', 'GB', 'CA']}
+    allowedCountries={['US']}
     billingAddressCollection={true}
+    shouldPersist={true}
+    stripe=''
   >
     <App />
   </CartProvider>,
