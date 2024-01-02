@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import { links } from "../lib/constants"
 import ShoppingCart from "./ShoppingCart"
+import { SideBar } from "./SideBar"
 
 const Navbar = () => {
 
@@ -11,7 +12,7 @@ const Navbar = () => {
 
                 <div className='flex items-center py-8 lg:py-0'>
                     <div className='flex items-center gap-3'>
-                        {/* <SheetDemo /> */}
+                        <SideBar />
                         <motion.div
                             whileHover={{ y: -5, paddingBlockEnd:"4px", borderBottomColor: "#ff7d1a", borderBottomWidth: "3px" }}
                         >

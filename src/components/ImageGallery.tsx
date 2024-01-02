@@ -36,6 +36,7 @@ const ImageGallery = () => {
           onClick={() => (document.getElementById('my_modal_3') as HTMLDialogElement).showModal()}
         />
 
+        {/* Modal */}
         <dialog id="my_modal_3" className="modal">
           <div className="modal-box w-2/5 max-w-5xl max-h-[90vh] bg-opacity-0 p-0 shadow-none">
             <form method="dialog">
