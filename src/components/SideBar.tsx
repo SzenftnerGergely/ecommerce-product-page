@@ -19,7 +19,7 @@ export function SideBar() {
                         <a
                             href={link.href}
                             className='text-lg font-semibold text-[#b6bcc8] trasition-all duration-100 
-                                        hover:text-[#1d2025] hover:border-b-4 pb-[3.5rem] hover:border-b-[#ff7d1a]'
+                                        hover:text-[#1d2025] hover:border-b-2 hover:border-b-[#ff7d1a]'
                         >
                             {link.name}
                         </a>

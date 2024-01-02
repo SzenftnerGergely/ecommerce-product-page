@@ -1,7 +1,7 @@
 import { useShoppingCart } from 'use-shopping-cart'
 import { CartEntry } from 'use-shopping-cart/core';
 
- 
+
 export default function CartItem({ item }: CartEntry) {
     const { name, image, quantity, price } = item
     const { removeItem } = useShoppingCart()
@@ -12,17 +12,17 @@ export default function CartItem({ item }: CartEntry) {
 
     return (
         <div className='w-full flex items-center justify-between py-3 gap-3'>
-            <img 
-                src={image} 
-                alt={name} 
+            <img
+                src={image}
+                alt={name}
                 className='w-12 h-12 rounded-md'
             />
 
             <div className='mr-auto'>
                 <span className='text-gray-400'>{name}</span>
                 <div className="flex gap-2">
-                    <div className='text-gray-400'>${price} x {quantity}</div> 
-                    <div className='font-bold text-black'>${quantity * price}</div>
+                    <div className='text-gray-400'>${parseFloat(price).toFixed(2)} x {quantity}</div>
+                    <div className='font-bold text-black'>${(quantity * price).toFixed(2)}</div>
                 </div>
             </div>
 

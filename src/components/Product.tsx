@@ -1,7 +1,20 @@
 import AddToCart from './AddToCart';
 import ImageGallery from './ImageGallery';
 
-const Product = ({ product }: any) => {
+type ProductData = {
+    name: string;
+    description: string;
+    id: string;
+    price: number;
+    images: string[];
+    currency: string;
+  };
+  
+  type ProductProps = {
+    product: ProductData;
+  };
+
+  const Product: React.FC<ProductProps> = ({ product }) => {
     const { name, price, description, images, id } = product
 
     return (
@@ -22,21 +35,22 @@ const Product = ({ product }: any) => {
                             {description}
                         </p>
 
-                        <div className='mb-4 flex flex-col gap-3'>
+                        <div className='mb-4 flex justify-between items-center sm:flex-col sm:items-baseline gap-3'>
                             <div className='flex items-center gap-5'>
                                 <div className='text-xl font-bold text-gray-800 md:text-3xl'>
-                                    ${price * 0.5}
+                                    ${(price * 0.5).toFixed(2)}
                                 </div>
                                 <div className='font-semibold text-[#ff7d1a] bg-[#ffefe2] px-1.5 py-0.5 rounded-md'>
                                     {50}%
                                 </div>
                             </div>
                             <div className='font-bold text-gray-300 line-through mb-4'>
-                                ${price}
+                                ${(price).toFixed(2)}
                             </div>
                         </div>
 
                         <AddToCart
+                            sku={id}
                             currency='USD'
                             description={description}
                             image={images[0]}
