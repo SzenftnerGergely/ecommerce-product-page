@@ -76,7 +76,7 @@ const ImageGallery = () => {
                       <img
                         src={image.src}
                         alt='photo'
-                        className='h-fit w-full object-cover'
+                        className='h-fit w-full object-cover select-none'
                       />
                     </div>
                   </SwiperSlide>
@@ -98,6 +98,7 @@ const ImageGallery = () => {
                     <button className='flex items-center justify-center'>
                       <img
                         src={image.src}
+                        className='select-none'
                       />
                     </button>
                   </SwiperSlide>
@@ -112,12 +113,16 @@ const ImageGallery = () => {
 
       <div className='order-last flex gap-4'>
         {images.map((image: Image, idx: number) => (
-          <div key={idx} className="overflow-hidden rounded-lg bg-gray-100">
+          <div
+            key={idx}
+            className={`overflow-hidden rounded-lg bg-gray-100
+              ${image.src == bigImage ? 'border-2 border-[#ff7d1a] opacity-100' : ""}`}
+          >
             <img
               src={image.src}
               alt='photo'
-              className='h-full w-full object-cover 
-                          object-center cursor-pointer'
+              className={`h-full w-full object-cover object-center cursor-pointer
+              ${image.src == bigImage ? 'opacity-35 hover:opacity-35' : ""} hover:opacity-70`}
               onClick={() => handleSmallImageClick(image.src)}
             />
           </div>
